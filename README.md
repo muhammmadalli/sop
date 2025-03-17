@@ -1,2 +1,2 @@
-# SOP - My repo of step by step hosting
-| Standard Operating Procedures for various tasks
+# SOP - My repo of step by step hostings
+> Standard Operating Procedures for various tasks and deployed servers
