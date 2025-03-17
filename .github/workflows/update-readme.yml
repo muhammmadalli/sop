@@ -1,15 +1,17 @@
 name: Update README with File List
+
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *' # Runs daily
-  workflow_dispatch:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -27,9 +29,11 @@ jobs:
           rm FILES.md
 
       - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add README.md
           git commit -m "Auto-update README with file list" || exit 0
-          git push
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
