@@ -10,7 +10,7 @@
 
 ```bash
 apt update && apt install git
-git clone [text](https://github.com/bulktrade/SMSC.git)
+git clone https://github.com/bulktrade/SMSC.git
 ```
 
 ## Start admin module
