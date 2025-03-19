@@ -9,9 +9,36 @@
 4. Run the following commands as sudo: -
 
 ```bash
-apt update && apt install git npm graphicsmagick python3 python3-pip python-is-python3 2to3
+apt update && apt install git npm graphicsmagick python3 python3-pip python-is-python3 2to3 build-essential software-properties-common
+echo 'export PYTHON=$(which python3)' >> ~/.bashrc
+source ~/.bashrc
 git clone https://github.com/bulktrade/SMSC.git
 cd SMSC
+nano /etc/apt/sources.list
+```
+Add the following repos in the `/etc/apt/sources.list` file
+```cpp
+deb http://deb.debian.org/debian/ bookworm main contrib non-free
+deb http://security.debian.org/debian-security bookworm-security main contrib non-free
+deb http://deb.debian.org/debian/ bookworm-updates main contrib non-free
+deb http://deb.debian.org/debian/ bookworm-backports main contrib non-free
+deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
+```
+
+```bash
+apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev \
+  libssl-dev libreadline-dev libffi-dev wget -y
+cd /usr/src
+wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
+tar -xvzf Python-2.7.18.tgz
+cd Python-2.7.18
+./configure --enable-optimizations
+make -j$(nproc)
+make altinstall
+ln -s /usr/local/bin/python2.7 /usr/bin/python2
+python2.7 --version
 ```
 
 ## Start admin module
@@ -40,6 +67,7 @@ After verifying that it's installed, retry:
 
 ```bash
 npm install -g phantomjs-prebuilt
+npm install -g node-gyp
 ```
 
 Then, retry:
