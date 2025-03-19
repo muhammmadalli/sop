@@ -9,7 +9,7 @@
 4. Run the following commands as sudo: -
 
 ```bash
-apt update && apt install git npm
+apt update && apt install git npm graphicsmagick python3 python3-pip python-is-python3 2to3
 git clone https://github.com/bulktrade/SMSC.git
 cd SMSC
 ```
@@ -21,6 +21,30 @@ cd SMSC
 * `npm install`
 
 > If the above method fails with errors, use ` npm install --legacy-peer-deps`
+
+#### Solution 1: Manually Install PhantomJS
+Try installing PhantomJS manually before running npm install again:
+
+```bash
+sudo apt update
+sudo apt install phantomjs -y
+phantomjs --version
+```
+After verifying that it's installed, retry:
+
+`npm install`
+
+
+#### Solution 2: Use an Alternative Installation for PhantomJS
+> If installing via apt doesn't work, use npm to install it separately:
+
+```bash
+npm install -g phantomjs-prebuilt
+```
+
+Then, retry:
+
+`npm install`
 
 ### Serve
 * `npm start` 
