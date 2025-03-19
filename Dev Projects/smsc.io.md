@@ -8,6 +8,11 @@
 3. Go to the folder of your choice.
 4. Run the following commands as sudo: -
 
+```bash
+apt update && apt install git
+git clone [text](https://github.com/bulktrade/SMSC.git)
+```
+
 ## Start admin module
 
 ### Installation
