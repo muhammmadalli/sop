@@ -3,14 +3,15 @@
 > Provided as Open Source Repo at [text](https://github.com/bulktrade/SMSC#)
 
 ## Steps to undertake
-1. Prepare a Ubuntu Server Machine.
-2. Update and Upgrade, preferably using apt
+1. Prepare a **Debian** / Ubuntu Server Machine.
+2. Update and Upgrade, preferably using `apt`
 3. Go to the folder of your choice.
 4. Run the following commands as sudo: -
 
 ```bash
-apt update && apt install git
+apt update && apt install git npm
 git clone https://github.com/bulktrade/SMSC.git
+cd SMSC
 ```
 
 ## Start admin module
@@ -19,10 +20,13 @@ git clone https://github.com/bulktrade/SMSC.git
 * `cd modules/admin`
 * `npm install`
 
+> If the above method fails with errors, use ` npm install --legacy-peer-deps`
+
 ### Serve
 * `npm start` 
 
-> go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your browser
+> go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your browser of the server machine.
+> Or go to http://<server-ip>:3000 from another browser.
 
 ### Admin module credentials
 	
