@@ -1,4 +1,4 @@
-# WikiJS Server Preperation
+# WikiJS Server Deployment 
 ## Update the machine
 
 ### Fetch latest updates
