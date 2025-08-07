@@ -1,7 +1,7 @@
 # Making a Custom VMware ESXi image for HyperV 
 
 ## Installing Python 3.7.9
-1. Install Python 3.7.9 from the link [text](https://www.python.org/downloads/release/python-379/).
+1. Install Python 3.7.9 from the link: [Python 3.7.9](https://www.python.org/downloads/release/python-379/).
 
 2. Also add Python to $PATH while installing.
 
@@ -12,6 +12,10 @@
 
 4. Set Python path in PowerCLI config
 > Set-PowerCLIConfiguration -PythonPath "C:\Users\<username>\AppData\Local\Programs\Python\Python37\python.exe" -Scope User
+
+## Downloading Tulip-Net Depot
+Download tulip-net VIB/drivers files from the following link: - <br>
+[Tulip-Net offline bundle 1.1.15](http://vibsdepot.v-front.de/depot/bundles/net-tulip-1.1.15-1-offline_bundle.zip)
 
 ## Modififcation of ESXi VMimage
 1. Navigate to the directory containing the image file and tulip drivers.
@@ -99,3 +103,25 @@ PS D:\vmedit> Export-EsxImageProfile -ImageProfile ESXi8.0U3-HyperV -FilePath d:
 
 > ✅ **Success!**
 > This creates our ESXi image ISO bootable inside Microsoft Windows Hyper-V Virtual Machine.
+
+
+# Configuring the Hyper-V VM
+## Enabling Nested Virtualization for the Hyper-V VM with ESXi
+
+Nested virtualization is a feature that allows you to run virtual machines inside a virtual machine. In this case a nested VM should run on a Hyper-V VM that has ESXi hypervisor installed. Enable nested virtualization for this VM in PowerShell.
+
+> PS C:\Windows\System32> Set-VMProcessor -VMName \<vm-name> -ExposeVirtualizationExtensions $true
+
+## ESXi Installation on the Hyper-V VM
+Now you are ready to install ESXi on a Hyper-V VM. Start your VM (right-click the VM name, select connect and click the Start button). Press TAB when you see the boot screen with a blue background to modify boot options, and prevent hanging the VM
+
+Install the ESXi as normal.
+
+## Enable ESXi to run headless (inside a VM)
+
+1. While ESXi is rebootin, press **Shift+O** before the boot begins.
+
+2. Enter ignoreHeadless=TRUE at the end of the string and press **Enter**.
+
+## Enable permanent headless for ESXi
+Below you can learn how to set this option permanently
