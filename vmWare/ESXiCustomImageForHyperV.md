@@ -14,7 +14,7 @@
 > pip install six lxml psutil pyopenssl
 
 4. Set Python path in PowerCLI config
-> Set-PowerCLIConfiguration -PythonPath "C:\Users\<username>\AppData\Local\Programs\Python\Python37\python.exe" -Scope User
+> Set-PowerCLIConfiguration -PythonPath "C:\Users\\<username>\AppData\Local\Programs\Python\Python37\python.exe" -Scope User
 
 ## Downloading Tulip-Net Depot
 Download tulip-net VIB/drivers files from the following link: - <br>
@@ -70,13 +70,8 @@ ESXi8.0U3-HyperV    muhammmadali    29/07/2025 12:…     PartnerSupported
 6. Add the tulip packages to the ESXi image
 ```bash
 # Command
-PS D:\vmedit> New-EsxImageProfile -CloneProfile ESXi-8.0U3g-24859861-standard -Name ESXi8.0U3-HyperV -Vendor muhammmadali
-# Output
-Name                           Vendor          Last Modified   Acceptance Level
-----                           ------          -------------   ----------------
-ESXi8.0U3-HyperV               muhammmadali    29/07/2025 12:… PartnerSupported
-
 PS D:\vmedit> Add-EsxSoftwarePackage -ImageProfile ESXi8.0U3-HyperV -SoftwarePackage net-tulip -Force
+# Output
 Add-EsxSoftwarePackage: In ImageProfile ESXi8.0U3-HyperV, the payload(s) in VIB DEC_bootbank_net-tulip_1.1.15-1 does not have sha-256 gunzip checksum. This will prevent VIB security verification and secure boot from functioning properly. Please remove this VIB or please check with your vendor for a replacement of this VIB
 ```
 > [!NOTE]  
