@@ -20,7 +20,7 @@
 2. Load ESXi image.
 ```bash
 # Command
-PS D:\vmedit>Add-EsxSoftwareDepot .\VMware-ESXi-8.0U3g-24859861-depot.zip
+PS D:\vmedit> Add-EsxSoftwareDepot .\VMware-ESXi-8.0U3g-24859861-depot.zip
 # Output
 Depot Url
 ---------
@@ -30,7 +30,7 @@ zip:D:\vmedit\VMware-ESXi-8.0U3g-24859861-depot.zip?index.xml
 3. Load Tulip Drivers
 ```bash
 # Command
-PS D:\vmedit>Add-EsxSoftwareDepot .\net-tulip-1.1.15-1-offline_bundle.zip
+PS D:\vmedit> Add-EsxSoftwareDepot .\net-tulip-1.1.15-1-offline_bundle.zip
 # Output
 Depot Url
 ---------
@@ -77,6 +77,25 @@ Add-EsxSoftwarePackage: In ImageProfile ESXi8.0U3-HyperV, the payload(s) in VIB 
     - Lacks a SHA-256 checksum, which is required for Secure Boot validation in ESXi 8.x. <br>
     - Without this checksum, Secure Boot will fail, and the image will be considered untrusted
 
-
+7. Secure Boot will be disabled by adding the **net-tulip** VIB (Not Recommended for Production)
 > [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
+> ⚠️ This compromises host integrity and is not recommended for production environments.
+
+8. Set the VMimage Acceptance Level to Community Supported
+```bash
+# Command
+PS D:\vmedit> Set-EsxImageProfile -AcceptanceLevel CommunitySupported -ImageProfile ESXi8.0U3-HyperV
+# Output
+Name                           Vendor          Last Modified        Acceptance Level
+----                           ------          -------------        ----------------
+ESXi8.0U3-HyperV               muhammmadali    07/08/2025 11:…      CommunitySupported
+```
+
+9. Now you are ready to create the ESXi installation ISO file that includes net-tulip drivers. Run the following command to create the ISO image: -
+
+```bash
+PS D:\vmedit> Export-EsxImageProfile -ImageProfile ESXi8.0U3-HyperV -FilePath d:vmedit\esxi80_hyperv.iso -ExportToIso -NoSignatureCheck -Force
+```
+
+> ✅ **Success!**
+> This creates our ESXi image ISO bootable inside Microsoft Windows Hyper-V Virtual Machine.
