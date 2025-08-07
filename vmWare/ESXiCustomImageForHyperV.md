@@ -1,5 +1,5 @@
 # Making a Custom VMware ESXi image for HyperV 
-## Install
+## Install PowerCLI
 1. Install VMWare PowerCLI from VMWare Cloud Foundations
 2. Open PowerShell and enter the following command
 > Install-Module -Name VCF.PowerCLI -AllowClobber
