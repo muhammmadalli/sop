@@ -124,4 +124,17 @@ Install the ESXi as normal.
 2. Enter ignoreHeadless=TRUE at the end of the string and press **Enter**.
 
 ## Enable permanent headless for ESXi
-Below you can learn how to set this option permanently
+Below you will set this option permanently: -<br>
+
+1. Open the ESXi console.
+
+1. Press F2 for configuringtroubleshooting options and enable ESXi Shell and SSH. 
+
+> [!WARNING] 
+> If ESXi Shell is disabled, your ESXi will freeze at the next step.
+
+3. Press Alt+F1 to enter the ESXi console. Enter the following command and set the boot settings:
+
+> Esxcfg-advcfg -k TRUE ignoreHeadless
+
+4. The console can be closed by pressing Alt+F2. Now you don’t need to enter **ignoreHeadless=TRUE** manually each time ESXi boots.
