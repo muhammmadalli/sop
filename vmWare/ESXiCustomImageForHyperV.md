@@ -1,5 +1,8 @@
 # Making a Custom VMware ESXi image for HyperV 
-
+## Install
+1. Install VMWare PowerCLI from VMWare Cloud Foundations
+2. Open PowerShell and enter the following command
+> Install-Module -Name VCF.PowerCLI -AllowClobber
 ## Installing Python 3.7.9
 1. Install Python 3.7.9 from the link: [Python 3.7.9](https://www.python.org/downloads/release/python-379/).
 
