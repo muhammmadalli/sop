@@ -14,7 +14,7 @@
 > pip install six lxml psutil pyopenssl
 
 4. Set Python path in PowerCLI config
-> Set-PowerCLIConfiguration -PythonPath "C:\Users\\<username>\AppData\Local\Programs\Python\Python37\python.exe" -Scope User
+> Set-PowerCLIConfiguration -PythonPath "C:\Users\ali53\AppData\Local\Programs\Python\Python37\python.exe" -Scope User
 
 ## Downloading Tulip-Net Depot
 Download tulip-net VIB/drivers files from the following link: - <br>
