@@ -93,3 +93,111 @@ WantedBy=multi-user.target
 systemctl enable --now paperless-web
 ```
 
+## 07. 🌍 Nginx Configuration
+1. Create /etc/nginx/sites-available/paperless:
+```Nginx
+server {
+    listen 80;
+    server_name your.domain.com;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name your.domain.com;
+
+    ssl_certificate /etc/letsencrypt/live/your.domain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your.domain.com/privkey.pem;
+
+    location / {
+        proxy_pass http://unix:/run/paperless/paperless.sock;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+2. Enable and reload:
+```bash
+ln -s /etc/nginx/sites-available/paperless /etc/nginx/sites-enabled/
+nginx -t && systemctl reload nginx
+certbot --nginx -d your.domain.com
+```
+
+## 08. 🗂️ Samba Share
+Edit /etc/samba/smb.conf:
+```ini
+[consumption]
+   path = /opt/paperless/consumption
+   browseable = yes
+   writable = yes
+   guest ok = no
+   valid users = paperless
+```
+
+2. Enable Samba:
+```bash
+systemctl enable --now smbd
+```
+
+## 09. 🖼️ ImageMagick PDF Support
+Edit /etc/ImageMagick-6/policy.xml:
+```xml
+<policy domain="coder" rights="read|write" pattern="PDF" />
+```
+
+## 10. 📦 jbig2enc Installation
+Install the encoder manually:
+```bash
+git clone https://github.com/agl/jbig2enc.git
+cd jbig2enc
+make
+cp jbig2 /usr/local/bin/
+```
+
+## 11. 🔐 Environment Variables
+Create /opt/paperless/.env:
+```ini
+PAPERLESS_REDIS=unix:///run/redis/redis.sock?password=your_secure_password
+PAPERLESS_DBHOST=/var/run/postgresql
+PAPERLESS_DBUSER=paperless
+PAPERLESS_DBPASS=
+PAPERLESS_DBNAME=paperless
+PAPERLESS_CONSUMPTION_DIR=/opt/paperless/consumption
+PAPERLESS_MEDIA_ROOT=/opt/paperless/media
+PAPERLESS_DATA_DIR=/opt/paperless/data
+```
+
+## 12. 🧪 Verify Setup
+Check service status and socket:
+```bash
+systemctl status paperless-web
+curl --unix-socket /run/paperless/paperless.sock http://localhost
+```
+
+## 13. 🧹 Privilege Cleanup (Optional)
+Remove unused roles and tighten access:
+```sql
+DROP ROLE IF EXISTS paperless_old;
+REVOKE ALL ON DATABASE paperless FROM PUBLIC;
+```
+
+## 14. 🔄 System Maintenance Tips
+- Use systemctl list-units --type=service to monitor services.
+- Rotate logs with logrotate.
+- Backup /opt/paperless and PostgreSQL regularly.
+
+# 📋 Summary Table
+| Component | Access Method | User | Path/Socket |
+|-----|-----|-----|-----| 
+| PostgreSQL | Unix socket | paperless | /var/run/postgresql | 
+| Redis | Unix socket + auth | paperless | /run/redis/redis.sock | 
+| Gunicorn | Unix socket | paperless | /run/paperless/paperless.sock | 
+| Samba | Network share | paperless | /opt/paperless/consumption | 
+| Nginx | Reverse proxy | - | /etc/nginx/sites-available | 
+
+
+
+
