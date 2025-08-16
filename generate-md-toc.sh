@@ -39,6 +39,7 @@ insert_toc() {
 }
 
 generate_structure
+cat "$TOC_TMP"  # Add this line
 insert_toc
 
 echo "✅ Clickable TOC inserted into $README"

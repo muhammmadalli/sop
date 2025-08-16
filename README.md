@@ -11,4 +11,44 @@
 > [!IMPORTANT]  
 > Standard Operating Procedures for various tasks and deployed servers by Muhammad Ali
 
+<!-- toc -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- tocstop -->
