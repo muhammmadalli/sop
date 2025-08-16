@@ -1,3 +1,31 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [🧾 Paperless-ngx Server Deployment Brief](#-paperless-ngx-server-deployment-brief)
+  - [1. Server Operating System](#1-server-operating-system)
+  - [2. Paperless-ngx Application Deployment](#2-paperless-ngx-application-deployment)
+  - [3. Implementation Details](#3-implementation-details)
+  - [4. Optional Enhancements](#4-optional-enhancements)
+    - [Samba Share](#samba-share)
+    - [ImageMagick PDF Support](#imagemagick-pdf-support)
+    - [jbig2enc Encoder](#jbig2enc-encoder)
+    - [NLTK Data](#nltk-data)
+  - [5. Security Hardening Measures](#5-security-hardening-measures)
+    - [Redis](#redis)
+    - [PostgreSQL](#postgresql)
+    - [Gunicorn](#gunicorn)
+    - [Nginx](#nginx)
+    - [System User Isolation](#system-user-isolation)
+    - [Systemd Sandboxing](#systemd-sandboxing)
+    - [Firewall Rules](#firewall-rules)
+    - [Fail2Ban](#fail2ban)
+    - [Audit Logging](#audit-logging)
+    - [Logrotate](#logrotate)
+  - [📊 Summary Table](#-summary-table)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 🧾 Paperless-ngx Server Deployment Brief
 
 ## 1. Server Operating System

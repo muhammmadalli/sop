@@ -1,3 +1,44 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Visual cheat sheet for LTE identifiers](#visual-cheat-sheet-for-lte-identifiers)
+- [List of Acronyms and their meaning ](#list-of-acronyms-and-their-meaning)
+- [Dictionary for these acronyms ](#dictionary-for-these-acronyms)
+  - [MSIN](#msin)
+  - [MCC](#mcc)
+  - [MNC](#mnc)
+  - [IMSI](#imsi)
+  - [PLMN](#plmn)
+  - [MMEGI](#mmegi)
+  - [MMEC](#mmec)
+  - [MMEI](#mmei)
+  - [GUMMEI](#gummei)
+  - [M-TMSI](#m-tmsi)
+  - [S-TMSI](#s-tmsi)
+  - [GUTI](#guti)
+  - [TAC](#tac)
+  - [TAI](#tai)
+  - [Enodeb-id](#enodeb-id)
+  - [cell-id](#cell-id)
+  - [ECI](#eci)
+  - [GENodeb-id](#genodeb-id)
+  - [ECGI ](#ecgi)
+- [radio network temporary identifiers (RNTI)](#radio-network-temporary-identifiers-rnti)
+  - [RNTI in the downlink](#rnti-in-the-downlink)
+    - [C-RNTI](#c-rnti)
+    - [TC-RNTI](#tc-rnti)
+    - [**​**SPS-C-RNTI](#%E2%80%8Bsps-c-rnti)
+    - [P-RNTI](#p-rnti)
+    - [RA-RNTI](#ra-rnti)
+    - [SI-RNTI](#si-rnti)
+    - [RA-RNTI](#ra-rnti-1)
+  - [RNTI in the uplink](#rnti-in-the-uplink)
+    - [TPC-PUCCH-RNTI](#tpc-pucch-rnti)
+    - [TPC-PUSCH-RNTI](#tpc-pusch-rnti)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 **_The Ultimate Cheat Sheet for LTE Identifiers_**
 
 **There is a term for too much known as** ***information overload*****, which means when you have too much to learn and understand in short time. Too much information to remember is not only challenging it can cause confusion and frustration as well.** 

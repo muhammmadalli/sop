@@ -1,3 +1,32 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [🛠️ Paperless-ngx Deployment & Hardening Guide](#-paperless-ngx-deployment--hardening-guide)
+  - [01. 📁 Folder Structure](#01--folder-structure)
+  - [02. 👤 Create Paperless Service User](#02--create-paperless-service-user)
+  - [03. 🐍 Python Virtual Environment](#03--python-virtual-environment)
+  - [04. 🗃️ PostgreSQL Configuration](#04--postgresql-configuration)
+  - [05. 🔧 Redis Configuration](#05--redis-configuration)
+  - [06. 🌐 Gunicorn Systemd Service](#06--gunicorn-systemd-service)
+  - [07. 🌍 Nginx Configuration](#07--nginx-configuration)
+  - [08. 🗂️ Samba Share](#08--samba-share)
+  - [09. 🖼️ ImageMagick PDF Support](#09--imagemagick-pdf-support)
+  - [10. 📦 jbig2enc Installation](#10--jbig2enc-installation)
+  - [11. 🧠 NLTK Data](#11--nltk-data)
+  - [12. 🔐 Firewall Rules (UFW)](#12--firewall-rules-ufw)
+  - [13. 🔐 Environment Variables](#13--environment-variables)
+  - [14. 🧪 Verify Setup](#14--verify-setup)
+  - [15. 🧹 Privilege Cleanup (Optional)](#15--privilege-cleanup-optional)
+  - [16. 🛡️ Fail2Ban for Nginx](#16--fail2ban-for-nginx)
+  - [17. 📜 Auditd and Logrotate](#17--auditd-and-logrotate)
+  - [18. 🔄 System Maintenance Tips](#18--system-maintenance-tips)
+- [Summary](#summary)
+  - [✅ Summary Table](#-summary-table)
+  - [📋 Config Table](#-config-table)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 🛠️ Paperless-ngx Deployment & Hardening Guide
 
 A comprehensive guide to deploying and securing Paperless-ngx on Debian 11 using socket-only services, systemd, and optional enhancements.

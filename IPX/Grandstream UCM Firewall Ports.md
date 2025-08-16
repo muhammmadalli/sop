@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Grand Stream UCM 6308 Service Ports](#grand-stream-ucm-6308-service-ports)
+  - [SIP Ports](#sip-ports)
+  - [RTP Ports (for media)](#rtp-ports-for-media)
+  - [HTTP/HTTPS Ports](#httphttps-ports)
+  - [WebRTC](#webrtc)
+  - [Additional Ports for Remote Access (if needed)](#additional-ports-for-remote-access-if-needed)
+  - [Session Border Controller (SBC)](#session-border-controller-sbc)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Grand Stream UCM 6308 Service Ports
 
 For a Grandstream UCM6308 system, the following ports need to be opened or forwarded in your firewall’s NAT server mapping to ensure that Grandstream Wave clients (desktop, web, and Android) work properly:

@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [vSAN](#vsan)
+  - [Key Features](#key-features)
+  - [Use Cases](#use-cases)
+  - [Benefits](#benefits)
+  - [Will adding an eSXI node into vSAN delete its currently running VMs](#will-adding-an-esxi-node-into-vsan-delete-its-currently-running-vms)
+    - [Steps to Add a New Node to a vSAN Cluster](#steps-to-add-a-new-node-to-a-vsan-cluster)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 vmWARE Products
 
 VMware offers a range of products primarily focused on virtualization and cloud computing. Here’s an overview of some key VMware products:

@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Access Share Folder via CMD in Win Server 22](#access-share-folder-via-cmd-in-win-server-22)
+    - [Syntax](#syntax)
+    - [Example](#example)
+  - [Additional Options](#additional-options)
+- [Copy a Folder Into Downloads](#copy-a-folder-into-downloads)
+  - [Using xcopy](#using-xcopy)
+    - [Syntax](#syntax-1)
+    - [Example](#example-1)
+  - [Using robocopy](#using-robocopy)
+    - [Syntax](#syntax-2)
+    - [Example](#example-2)
+  - [Steps](#steps)
+  - [Note](#note)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Access Share Folder via CMD in Win Server 22
 
 To access a shared folder via the command line on Windows Server 2022, you can use the net use command. Here is the general syntax and an example:

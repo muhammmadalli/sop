@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [ESXI Host Management Network](#esxi-host-management-network)
+    - [1.      **Run the** `**esxcli**` **Command for Management Network:**](#1%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0-run-the-esxcli-command-for-management-network)
+    - [2.      **Review the Output:**](#2%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0-review-the-output)
+    - [3.      **Identify the Management Network Interface:**](#3%C2%A0%C2%A0%C2%A0%C2%A0%C2%A0-identify-the-management-network-interface)
+  - [Detailed Breakdown](#detailed-breakdown)
+    - [Example Output:](#example-output)
+- [DHCP for VMs in ESXi](#dhcp-for-vms-in-esxi)
+  - [Option 1: Using an External DHCP Server](#option-1-using-an-external-dhcp-server)
+  - [Option 2: Using a Virtual DHCP Server](#option-2-using-a-virtual-dhcp-server)
+  - [Summary](#summary)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Ethernet Address of ESXI via SSH
 
 To find the Ethernet (MAC) address of an ESXi host via SSH, you can use the following steps:

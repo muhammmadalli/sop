@@ -1,3 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Access Share Folder On Windows Server CLI](#access-share-folder-on-windows-server-cli)
+  - [On Windows](#on-windows)
+    - [Example](#example)
+  - [On Linux](#on-linux)
+    - [Example](#example-1)
+  - [Mounting a Windows Share on Linux](#mounting-a-windows-share-on-linux)
+    - [Example](#example-2)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Access Share Folder On Windows Server CLI
 
 To access a shared folder on a Windows server using the command line interface (CLI), you can use the net use command in Windows or the smbclient command in Linux. Below are the steps for both:

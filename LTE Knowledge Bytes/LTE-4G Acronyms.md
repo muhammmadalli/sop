@@ -1,3 +1,36 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [LTE Acronyms Guide](#lte-acronyms-guide)
+- [Wireless Networks Acronyms Summary](#wireless-networks-acronyms-summary)
+    - [1 - 9](#1---9)
+    - [A](#a)
+    - [B](#b)
+    - [C](#c)
+    - [D](#d)
+    - [E](#e)
+      - [ F](#f)
+      - [G](#g)
+      - [H](#h)
+      - [I](#i)
+      - [K](#k)
+      - [L](#l)
+      - [ M](#m)
+      - [N](#n)
+      - [O](#o)
+      - [P](#p)
+      - [Q](#q)
+      - [R](#r)
+      - [ S](#s)
+      - [T](#t)
+      - [U](#u)
+      - [V](#v)
+      - [W](#w)
+      - [X](#x)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # LTE Acronyms Guide
 
 | ACRONYM | MEANING | DEFINITION |

@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Step 1: Update Your System](#step-1-update-your-system)
+- [Step 2: Install Certbot](#step-2-install-certbot)
+- [Step 3: Install the Certbot Plugin for Your Web Server](#step-3-install-the-certbot-plugin-for-your-web-server)
+- [Step 4: Obtain an SSL Certificate](#step-4-obtain-an-ssl-certificate)
+- [Step 5: Verify the Installation](#step-5-verify-the-installation)
+- [Step 6: Set Up Automatic Renewal](#step-6-set-up-automatic-renewal)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 To install TLS (Transport Layer Security) on Ubuntu, you'll typically install and configure a web server (like Apache or Nginx) with an SSL certificate. Here are the steps to do this using Let's Encrypt, a free and automated certificate authority:
 
 ## Step 1: Update Your System

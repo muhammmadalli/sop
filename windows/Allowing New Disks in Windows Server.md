@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Using Diskpart](#using-diskpart)
+- [Extra Steps](#extra-steps)
+    - [1\. **Step 1.**](#1%5C-step-1)
+    - [2\. **Step 2.**](#2%5C-step-2)
+    - [3\. **Step 3.**](#3%5C-step-3)
+    - [4\. **Step 4.**](#4%5C-step-4)
+    - [5\. **Step 5.**](#5%5C-step-5)
+    - [6\.**Step 6.**](#6%5Cstep-6)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Using Diskpart
 1. Open a command prompt or PowerShell session locally on the VM.
 2. Open the disk partition tool

@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [1\. Using the `find` Command](#1%5C-using-the%C2%A0find-command)
+- [2\. Using the `locate` Command](#2%5C-using-the%C2%A0locate-command)
+- [3\. Using the `which` Command](#3%5C-using-the%C2%A0which-command)
+- [4\. Using the `whereis` Command](#4%5C-using-the%C2%A0whereis-command)
+- [5\. Using the Graphical Interface](#5%5C-using-the-graphical-interface)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Find File Location In Ubuntu
 
 To find the location of a file in Ubuntu, you can use several methods depending on your needs and preferences. Here are a few commonly used methods:

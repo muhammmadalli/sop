@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Making a Custom VMware ESXi image for HyperV](#making-a-custom-vmware-esxi-image-for-hyperv)
+  - [Install PowerCLI](#install-powercli)
+  - [Installing Python 3.7.9](#installing-python-379)
+  - [Downloading Tulip-Net Depot](#downloading-tulip-net-depot)
+  - [Modififcation of ESXi VMimage](#modififcation-of-esxi-vmimage)
+- [Configuring the Hyper-V VM](#configuring-the-hyper-v-vm)
+  - [Enabling Nested Virtualization for the Hyper-V VM with ESXi](#enabling-nested-virtualization-for-the-hyper-v-vm-with-esxi)
+  - [ESXi Installation on the Hyper-V VM](#esxi-installation-on-the-hyper-v-vm)
+  - [Enable ESXi to run headless (inside a VM)](#enable-esxi-to-run-headless-inside-a-vm)
+  - [Enable permanent headless for ESXi](#enable-permanent-headless-for-esxi)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Making a Custom VMware ESXi image for HyperV 
 ## Install PowerCLI
 1. Install VMWare PowerCLI from VMWare Cloud Foundations

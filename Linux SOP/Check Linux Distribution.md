@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Check Linux Distribution](#check-linux-distribution)
+  - [Other Ways](#other-ways)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Check Linux Distribution
 
 To check which Linux distribution you are using, you can use one of the following commands in your terminal:

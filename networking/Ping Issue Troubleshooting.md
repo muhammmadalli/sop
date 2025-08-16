@@ -1,3 +1,31 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Device Inaccessible Outside Local Subnet](#device-inaccessible-outside-local-subnet)
+    - [1\. ****Check IP Configuration****](#1%5C-check-ip-configuration)
+    - [2\. ****Verify Route Table****](#2%5C-verify-route-table)
+    - [3\. ****Check for Firewall Issues****](#3%5C-check-for-firewall-issues)
+    - [4\. ****Verify ARP Cache****](#4%5C-verify-arp-cache)
+    - [5\. ****Check for Duplicate IP Addresses****](#5%5C-check-for-duplicate-ip-addresses)
+    - [6\. ****Test Connectivity with Tracert****](#6%5C-test-connectivity-with-tracert)
+    - [7\. ****Network Interface Check****](#7%5C-network-interface-check)
+    - [8\. ****Verify VLAN and Network Configuration****](#8%5C-verify-vlan-and-network-configuration)
+  - [Clear Previous Routes](#clear-previous-routes)
+    - [1\. ****Open Command Prompt as Administrator****](#1%5C-open-command-prompt-as-administrator)
+    - [2\. ****Clear All Routes****](#2%5C-clear-all-routes)
+    - [3\. ****Verify Route Table****](#3%5C-verify-route-table)
+    - [4\. ****Re-add Necessary Routes****](#4%5C-re-add-necessary-routes)
+  - [Restriction by Gateway](#restriction-by-gateway)
+    - [1\. ****MAC Address Filtering****](#1%5C-mac-address-filtering)
+    - [2\. ****Dynamic ARP Inspection (DAI)****](#2%5C-dynamic-arp-inspection-dai)
+    - [3\. ****Port Security on Switches****](#3%5C-port-security-on-switches)
+    - [4\. ****Stale ARP Entries****](#4%5C-stale-arp-entries)
+    - [5\. ****VLAN Configuration Issues****](#5%5C-vlan-configuration-issues)
+    - [****Steps to Resolve the Issue:****](#steps-to-resolve-the-issue)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Device Inaccessible Outside Local Subnet
 
 My windows can ping the devices in the subnet. But cannot ping gateway and other networks. Other device on the subnet can ping the gateway and other networks.

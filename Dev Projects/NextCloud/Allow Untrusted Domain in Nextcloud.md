@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Allow Untrusted Domain in Nextcloud](#allow-untrusted-domain-in-nextcloud)
+  - [**Locate the** `**config.php**` **File:**](#locate-the%C2%A0configphp-file)
+  - [**Open the** `**config.php**` **File:**](#open-the%C2%A0configphp-file)
+  - [**Edit the Trusted Domains Section:**](#edit-the-trusted-domains-section)
+  - [**Save the** `**config.php**` **File:**](#save-the%C2%A0configphp-file)
+  - [**Restart Your Web Server:**](#restart-your-web-server)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Allow Untrusted Domain in Nextcloud
 
 To allow untrusted domains in Nextcloud, you need to modify the `config.php` file in your Nextcloud installation. Here’s how to do it:

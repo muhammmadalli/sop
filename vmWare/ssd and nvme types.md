@@ -1,3 +1,22 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [SSD](#ssd)
+- [**NVMe**](#nvme)
+  - [NVMe Versions and Their Differences](#nvme-versions-and-their-differences)
+  - [Performance Gains with NVMe](#performance-gains-with-nvme)
+- [NVME U2 and M2](#nvme-u2-and-m2)
+  - [1. **NVMe M.2**](#1%C2%A0nvme-m2)
+  - [2. **NVMe U.2**](#2%C2%A0nvme-u2)
+  - [Key Differences](#key-differences)
+- [Minimum GB SSD of SAS, SATA and NVME U2 Types](#minimum-gb-ssd-of-sas-sata-and-nvme-u2-types)
+  - [1. **SAS SSDs** (Serial Attached SCSI)](#1%C2%A0sas-ssds-serial-attached-scsi)
+  - [2. **SATA SSDs** (Serial ATA)](#2%C2%A0sata-ssds-serial-ata)
+  - [3. **NVMe U.2 SSDs**](#3%C2%A0nvme-u2-ssds)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # SSD
 
 SSDs are available in both **SATA** and **SAS** interfaces:

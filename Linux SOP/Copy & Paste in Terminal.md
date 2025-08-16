@@ -1,3 +1,23 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Copying And Pasting In Ubuntu Bash](#copying-and-pasting-in-ubuntu-bash)
+  - [Copying and Pasting in the Terminal](#copying-and-pasting-in-the-terminal)
+    - [Using Mouse](#using-mouse)
+    - [Using Keyboard Shortcuts](#using-keyboard-shortcuts)
+  - [Alternative Method](#alternative-method)
+- [Terminal Only](#terminal-only)
+  - [Copying and Pasting in the Terminal without a GUI](#copying-and-pasting-in-the-terminal-without-a-gui)
+    - [Using screen or tmux](#using-screen-or-tmux)
+      - [Using tmux](#using-tmux)
+      - [Using screen](#using-screen)
+  - [Copying and Pasting Between Local Machine and Server](#copying-and-pasting-between-local-machine-and-server)
+    - [Using SSH](#using-ssh)
+  - [Using Terminal Multiplexers for Advanced Management](#using-terminal-multiplexers-for-advanced-management)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Copying And Pasting In Ubuntu Bash
 
 Yes, Ubuntu Bash allows copying and pasting. Here are the methods to do it:

@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [noarch.rpm](#noarchrpm)
+- [.pkg file](#pkg-file)
+- [.deb file](#deb-file)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Linux Installation Package File Types
 
 # noarch.rpm

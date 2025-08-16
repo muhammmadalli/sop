@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Ubuntu - Change Keyboard Layout via Terminal](#ubuntu---change-keyboard-layout-via-terminal)
+  - [Temporary Change](#temporary-change)
+  - [Permanent Change](#permanent-change)
+- [Set DHCP in 00installer.yaml config](#set-dhcp-in-00installeryaml-config)
+- [ens36 to Have Default Gateway Only for Selected Ip Range](#ens36-to-have-default-gateway-only-for-selected-ip-range)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Ubuntu - Change Keyboard Layout via Terminal
 
 ## Temporary Change

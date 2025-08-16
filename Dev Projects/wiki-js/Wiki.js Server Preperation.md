@@ -1,3 +1,36 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [WikiJS Server Deployment](#wikijs-server-deployment)
+  - [Update the machine](#update-the-machine)
+    - [Fetch latest updates](#fetch-latest-updates)
+    - [Install all updates automatically](#install-all-updates-automatically)
+  - [Install Docker](#install-docker)
+    - [Install dependencies to install Docker](#install-dependencies-to-install-docker)
+    - [Register Docker package registry](#register-docker-package-registry)
+    - [Refresh package udpates and install Docker](#refresh-package-udpates-and-install-docker)
+  - [Setup Containers](#setup-containers)
+    - [Create installation directory for Wiki.js](#create-installation-directory-for-wikijs)
+    - [Generate DB secret](#generate-db-secret)
+    - [Create internal docker network](#create-internal-docker-network)
+    - [Create data volume for PostgreSQL](#create-data-volume-for-postgresql)
+    - [Create the containers](#create-the-containers)
+  - [Setup Firewall](#setup-firewall)
+  - [Start the containers](#start-the-containers)
+  - [For Certificates from Let's Encrypt](#for-certificates-from-lets-encrypt)
+  - [Details of Current Implementation](#details-of-current-implementation)
+    - [Create use self-signed certificates for HTTPS ](#create-use-self-signed-certificates-for-https)
+    - [Create Docker container with mounted certificates](#create-docker-container-with-mounted-certificates)
+      - [Stop and Remove Previous Docker Container](#stop-and-remove-previous-docker-container)
+      - [Create New Container](#create-new-container)
+      - [ Start the container and enter it as root user](#start-the-container-and-enter-it-as-root-user)
+      - [Assign correct permissions to SSL certificate and key](#assign-correct-permissions-to-ssl-certificate-and-key)
+      - [Open and edit CONFIG.YML file in the docker](#open-and-edit-configyml-file-in-the-docker)
+    - [Restart the container](#restart-the-container)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # WikiJS Server Deployment 
 ## Update the machine
 
