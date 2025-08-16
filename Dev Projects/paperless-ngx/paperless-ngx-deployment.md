@@ -157,7 +157,35 @@ make
 cp jbig2 /usr/local/bin/
 ```
 
-## 11. 🔐 Environment Variables
+## 11. 🧠 NLTK Data
+```python
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('snowball_data')
+```
+
+Move data to:
+```bash
+mkdir -p /usr/share/nltk_data
+mv ~/nltk_data/* /usr/share/nltk_data/
+```
+
+## 12. 🔐 Firewall Rules (UFW)
+```bash
+sudo apt install ufw
+ufw default deny incoming
+ufw allow 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw deny 5432
+ufw deny 6379
+ufw enable
+```
+
+
+
+## 13. 🔐 Environment Variables
 Create /opt/paperless/.env:
 ```ini
 PAPERLESS_REDIS=unix:///run/redis/redis.sock?password=your_secure_password
@@ -170,26 +198,88 @@ PAPERLESS_MEDIA_ROOT=/opt/paperless/media
 PAPERLESS_DATA_DIR=/opt/paperless/data
 ```
 
-## 12. 🧪 Verify Setup
+## 14. 🧪 Verify Setup
 Check service status and socket:
 ```bash
 systemctl status paperless-web
 curl --unix-socket /run/paperless/paperless.sock http://localhost
 ```
 
-## 13. 🧹 Privilege Cleanup (Optional)
+## 15. 🧹 Privilege Cleanup (Optional)
 Remove unused roles and tighten access:
 ```sql
 DROP ROLE IF EXISTS paperless_old;
 REVOKE ALL ON DATABASE paperless FROM PUBLIC;
 ```
 
-## 14. 🔄 System Maintenance Tips
+## 16. 🛡️ Fail2Ban for Nginx
+Open /etc/fail2ban/jail.d/nginx.conf
+```ini
+[nginx-http-auth]
+enabled = true
+port    = http,https
+filter  = nginx-http-auth
+logpath = /var/log/nginx/error.log
+maxretry = 3
+```
+
+```bash
+systemctl enable --now fail2ban
+```
+
+## 17. 📜 Auditd and Logrotate
+```bash
+apt install auditd logrotate
+nano /etc/logrotate.d/paperless
+```
+
+```ini
+/opt/paperless/logs/*.log {
+    daily
+    missingok
+    rotate 14
+    compress
+    notifempty
+    create 640 paperless paperless
+}
+```
+
+
+
+
+## 18. 🔄 System Maintenance Tips
 - Use systemctl list-units --type=service to monitor services.
-- Rotate logs with logrotate.
 - Backup /opt/paperless and PostgreSQL regularly.
 
-# 📋 Summary Table
+# Summary
+
+## ✅ Summary Table
+| Component | Configuration Summary | Security Level |
+|----|----|----| 
+| OS (Debian 11) | Offline install, tuned swap, clean structure | 🟢 Hardened | 
+| Redis | Unix socket only, password auth, restricted permissions | 🟢 Hardened | 
+| PostgreSQL | Socket-only, peer auth, locked-down pg_hba.conf | 🟢 Hardened | 
+| Gunicorn | Unix socket only, systemd sandboxing | 🟢 Hardened | 
+| Nginx | HTTPS with redirect, reverse proxy to socket | 🟢 Hardened | 
+| Python (.local) | Virtualenv under /opt/paperless/.local, isolated from system | 🟢 Hardened | 
+| Paperless-ngx | Manual install, secure env, verified OCR tools | 🟢 Hardened | 
+| Samba Share | Shared input folder with restricted access | 🟡 Controlled | 
+| ImageMagick PDF | Enabled PDF processing for thumbnails | 🟡 Controlled | 
+| jbig2enc | Installed manually, used for PDF compression | 🟡 Controlled | 
+| NLTK Data | Downloaded for ML features, stored securely | 🟡 Controlled | 
+| Firewall | UFW/iptables with minimal exposure | 🟢 Hardened | 
+| User Accounts | No shell, no password, isolated permissions | 🟢 Hardened | 
+| Fail2Ban | Brute-force protection for Nginx | 🟢 Hardened | 
+| Auditd | Tracks file access and system events | 🟢 Hardened | 
+| Logrotate | Manages logs for Paperless and system services | 🟢 Hardened | 
+
+
+
+---
+
+
+
+## 📋 Config Table
 | Component | Access Method | User | Path/Socket |
 |-----|-----|-----|-----| 
 | PostgreSQL | Unix socket | paperless | /var/run/postgresql | 
