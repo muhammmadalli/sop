@@ -26,12 +26,32 @@ generate_structure() {
 
 # Insert TOC into README.md
 insert_toc() {
-  awk -v toc="$(<"$TOC_TMP")" '
-    BEGIN { print_mode=1 }
-    /<!-- toc -->/ { print; print toc; print_mode=0; next }
-    /<!-- tocstop -->/ { print_mode=1 }
-    print_mode==1 { print }
-    /<!-- tocstop -->/ { print }
+  awk -v toc_file="$TOC_TMP" '
+    function insert_toc() {
+      while ((getline line < toc_file) > 0) {
+        print line
+      }
+      close(toc_file)
+    }
+
+    BEGIN { in_toc=0 }
+
+    /<!-- toc -->/ {
+      print
+      insert_toc()
+      in_toc=1
+      next
+    }
+
+    /<!-- tocstop -->/ {
+      in_toc=0
+      print
+      next
+    }
+
+    in_toc == 0 {
+      print
+    }
   ' "$README" > "${README}.new"
 
   mv "${README}.new" "$README"
