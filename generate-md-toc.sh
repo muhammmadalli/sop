@@ -1,26 +1,30 @@
 #!/bin/bash
 
-# Output file
 README="README.md"
 TOC_TMP="repo_structure.md"
 
-# Generate tree structure
+# Generate Markdown TOC with links
 generate_structure() {
   echo "## 📁 Repository Structure" > "$TOC_TMP"
   echo "" >> "$TOC_TMP"
+
   find . -type d ! -path './.*' | while read -r dir; do
     indent=$(echo "$dir" | grep -o "/" | wc -l)
     prefix=$(printf '  %.0s' $(seq 1 $indent))
-    echo "${prefix}- 📁 $(basename "$dir")" >> "$TOC_TMP"
+    dir_name=$(basename "$dir")
+    echo "${prefix}- 📁 $dir_name" >> "$TOC_TMP"
+
     find "$dir" -maxdepth 1 -type f ! -name ".*" | while read -r file; do
       file_indent=$(($indent + 1))
       file_prefix=$(printf '  %.0s' $(seq 1 $file_indent))
-      echo "${file_prefix}- 📄 $(basename "$file")" >> "$TOC_TMP"
+      file_name=$(basename "$file")
+      file_path=$(echo "$file" | sed 's|^\./||')  # remove leading ./
+      echo "${file_prefix}- 📄 [$file_name]($file_path)" >> "$TOC_TMP"
     done
   done
 }
 
-# Insert into README.md between <!-- toc --> and <!-- tocstop -->
+# Insert TOC into README.md
 insert_toc() {
   awk -v toc="$(<"$TOC_TMP")" '
     BEGIN { print_mode=1 }
@@ -37,4 +41,4 @@ insert_toc() {
 generate_structure
 insert_toc
 
-echo "✅ TOC inserted into $README"
+echo "✅ Clickable TOC inserted into $README"
