@@ -1,0 +1,46 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: seafile-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=<customPW>   # must match below
+      - MYSQL_DATABASE=seafile
+      - MYSQL_USER=seafile
+      - MYSQL_LOG_CONSOLE=true
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    volumes:
+      - ./shared/db:/var/lib/mysql
+    networks:
+      - seafile-net
+
+  memcached:
+    image: memcached:1.6
+    container_name: seafile-memcached
+    entrypoint: memcached -m 256
+    networks:
+      - seafile-net
+
+  seafile:
+    image: seafileltd/seafile-mc:mine
+    #image: seafileltd/seafile-mc:11.0.10
+    container_name: seafile
+    environment:
+      - DB_HOST=db
+      - DB_ROOT_PASSWD=<customPW>   # must match MYSQL_ROOT_PASSWORD
+      - SEAFILE_SERVER_LETSENCRYPT=false
+      - SEAFILE_SERVER_HOSTNAME=seafile.my
+    ports:
+      - "8080:80"
+      - "54443:443"
+      - "8082:8082"
+    volumes:
+      - ./shared/seafile:/shared
+      - ./shared/ssl:/shared/ssl  # mount SSL certs
+    depends_on:
+      - db
+      - memcached
+    networks:
+      - seafile-net
+
+networks:
+  seafile-net:
