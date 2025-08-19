@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [🛠 Seafile with Self-Signed TLS](#-seafile-with-self-signed-tls)
+- [1. Generate a self-signed certificate](#1-generate-a-self-signed-certificate)
+  - [2. Adjust docker-compose.yml](#2-adjust-docker-composeyml)
+  - [3. Configure Seafile to use the cert](#3-configure-seafile-to-use-the-cert)
+  - [4. Access Seafile](#4-access-seafile)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 🛠 Seafile with Self-Signed TLS
 # 1. Generate a self-signed certificate
 
