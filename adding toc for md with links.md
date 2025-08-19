@@ -12,11 +12,13 @@
 
 # Table of Contents in md Files in Github Repo
 
+## MD-Table of Contents Github MD file
+https://github.com/jonschlinkert/markdown-toc
 
-## Downlaod and Isntall Docker
+## Downlaod and Install Docker
 https://docs.docker.com/desktop/setup/install/windows-install/
 
-## Node.js
+## Node.js inside the node Container
 https://nodejs.org/en/download
 
 ```sh
@@ -34,15 +36,6 @@ docker run -it --rm -v "D:\programLearn\sop:/app/data" --entrypoint sh node:22-a
 node -v # Should print "v22.18.0".
 # Verify npm version:
 npm -v # Should print "10.9.3".
-```
-
-
-# MD-Table of Contents Github MD file
-https://github.com/jonschlinkert/markdown-toc
-
-
-```sh
-# Docker
 ls /app/data/
 # Dev Projects      LTE Knowledge Bytes  networking           windows
 # IPX             Linux SOP            trivialSolutions
@@ -51,7 +44,7 @@ cd /app/data/
 npm install -g npm@11.5.2
 npm fund
 ```
-Recursive TOC Generator
+## Recursive TOC Generator
 - Scans all Markdown files in your repo, including subfolders.
 - Inserts TOCs at the top of each file.
 - CLI usage:
@@ -62,6 +55,9 @@ npm install -g doctoc
 npm fund
 doctoc .
 ```
+
+# For clickable links - in main Readme.md
+
 ```sh
 # Docker
 # for making a .txt file with complete folder structure
@@ -73,7 +69,7 @@ npm fund
 
 markdown-toc -i README.md
 ```
-# Bash for clickable links
+## Bash For clickable links - in main Readme.md
 
 ```sh
 #!/bin/bash
