@@ -13,7 +13,7 @@
 # Table of Contents in md Files in Github Repo
 
 
-## downlaod and isntall docker
+## Downlaod and Isntall Docker
 https://docs.docker.com/desktop/setup/install/windows-install/
 
 ## Node.js
