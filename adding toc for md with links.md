@@ -3,7 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Table of Contents in md Files in Github Repo](#table-of-contents-in-md-files-in-github-repo)
-  - [downlaod and isntall docker](#downlaod-and-isntall-docker)
+  - [Downlaod and Isntall Docker](#downlaod-and-isntall-docker)
   - [Node.js](#nodejs)
 - [MD-Table of Contents Github MD file](#md-table-of-contents-github-md-file)
 - [Bash for clickable links](#bash-for-clickable-links)
