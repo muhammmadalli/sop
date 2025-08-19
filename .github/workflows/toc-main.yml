@@ -1,0 +1,39 @@
+name: Generate Clickable TOC
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  toc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run TOC generator
+        run: |
+          chmod +x .github/scripts/generate_toc.sh
+          .github/scripts/generate_toc.sh
+
+      - name: Commit & push changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: update clickable TOC in README"
+            git push origin HEAD:${GITHUB_REF##*/}
+          else
+            echo "No TOC updates needed"
+          fi
