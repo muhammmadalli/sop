@@ -3,10 +3,12 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Table of Contents in md Files in Github Repo](#table-of-contents-in-md-files-in-github-repo)
-  - [Downlaod and Isntall Docker](#downlaod-and-isntall-docker)
-  - [Node.js](#nodejs)
-- [MD-Table of Contents Github MD file](#md-table-of-contents-github-md-file)
-- [Bash for clickable links](#bash-for-clickable-links)
+  - [MD-Table of Contents Github MD file](#md-table-of-contents-github-md-file)
+  - [Downlaod and Install Docker](#downlaod-and-install-docker)
+  - [Node.js inside the node Container](#nodejs-inside-the-node-container)
+  - [Recursive TOC Generator](#recursive-toc-generator)
+- [For clickable links - in main Readme.md](#for-clickable-links---in-main-readmemd)
+  - [Bash For clickable links - in main Readme.md](#bash-for-clickable-links---in-main-readmemd)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
