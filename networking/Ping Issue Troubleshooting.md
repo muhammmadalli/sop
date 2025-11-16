@@ -54,6 +54,36 @@ Network Destination Netmask Gateway Interface Metric
 ```
 route add 0.0.0.0 mask 0.0.0.0 <Gateway IP>;
 ```
+- This adds a default route to the Windows routing table.
+
+    - `0.0.0.0` mask `0.0.0.0` → means “any destination”
+
+    - `<Gateway IP>` → usually your router’s IP (e.g., `192.168.1.1`)
+
+So the system will send all unknown traffic to that gateway.
+
+🔧 Example
+
+If your router’s IP is `192.168.10.1`, use:
+```bash
+route add 0.0.0.0 mask 0.0.0.0 192.168.10.1
+```
+- Make It Persistent (so it stays after reboot)
+
+ By default, the route is temporary. To make it persistent:
+```bash
+route -p add 0.0.0.0 mask 0.0.0.0 <Gateway IP>
+```
+ Check That It Worked
+```bash
+route print
+```
+
+You should see something like:
+```bash
+0.0.0.0    0.0.0.0     <Gateway IP>   <Interface>
+```
+
 
 ### 3\. ****Check for Firewall Issues****
 
