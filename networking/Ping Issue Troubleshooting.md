@@ -74,16 +74,17 @@ route add 0.0.0.0 mask 0.0.0.0 192.168.10.1
 ```bash
 route -p add 0.0.0.0 mask 0.0.0.0 <Gateway IP>
 ```
- Check That It Worked
+To see the persistent routes:
 ```bash
-route print
+route print -p
 ```
-
-You should see something like:
+- What it shows
+    - Normal (volatile) routes
+    - Persistent routes at the bottom under:
 ```bash
-0.0.0.0    0.0.0.0     <Gateway IP>   <Interface>
+Persistent Routes:
+  Network Address   Netmask   Gateway Address   Metric
 ```
-
 
 ### 3\. ****Check for Firewall Issues****
 
