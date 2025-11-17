@@ -68,7 +68,7 @@ If your router’s IP is `192.168.10.1`, use:
 ```bash
 route add 0.0.0.0 mask 0.0.0.0 192.168.10.1
 ```
-- Make It Persistent (so it stays after reboot)
+- Make It **Persistent** (so it stays after reboot) so that they become persistent not volatitle or temporary
 
  By default, the route is temporary. To make it persistent:
 ```bash
